@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 2</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <main class="container border mt-5 bg-info-subtle bg-gradient border-2 border-danger border-opacity-75 rounded" >
+        <h1 class="text-center border-bottom border-success">Personal Information Form</h1>
+        <!-- <div>
+            <div class="border border-primary mt-2">
+            Border Test
+            </div>
+            <div class="border border-success mt-2">
+                Border Test
+            </div>
+            <div class="border border-danger mt-2">
+                Border Test
+            </div>
+            <div class="border border-info mt-2">
+                Border Test
+            </div>
+            <div class="border border-light bg-warning mt-2">
+            <p class="text-primary">Test Text</p> 
+            </div>
+            <div class="border border-light bg-warning-subtle mt-2">
+                <p class="text-primary">bg-warning-subtle</p> 
+            </div>
+            <div class="border border-dark mt-2">
+                Border Test
+            </div>
+            <div class="border border-warning mt-2">
+                Border Test
+            </div>
+        </div> -->
+        
+        <form class="d-flex flex-column justify-content-center align-items-center ">
+            <div class="border d-flex flex-column gap-3 border-info w-75 rounded p-2 mt-2">
+                <!-- name section -->
+                <div class="d-flex w-100 gap-3">
+                    <div class="form-floating w-50">
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        id="firstname" 
+                        aria-describedby="emailHelp"
+                        placeholder="Jakaria">
+                        <label for="firstname" class="form-label">First Name</label>
+                    </div>
+                    <div class=" form-floating w-50">
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        id="firstname" 
+                        aria-describedby="emailHelp"
+                        placeholder="Ahmed">
+                        <label for="firstname" class="form-label">Last Name</label>
+                    </div>
+                </div>
+
+                <!-- email section -->
+                <div class=" form-floating w-100">
+                    <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    aria-describedby="emailHelp"
+                    placeholder="test@test.com">
+                    <label for="firstname" class="form-label">E-mail</label>
+                </div>
+
+                <!-- PHONE & LOCATION -->
+                <div class="d-flex w-100 gap-3">
+                    <div class="form-floating w-50">
+                        <input 
+                        type="tel" 
+                        class="form-control" 
+                        id="phonenumber" 
+                        aria-describedby="emailHelp"
+                        placeholder="0163242347237">
+                        <label for="phonenumber" class="form-label">Contact Number</label>
+                    </div>
+                    <div class=" form-floating w-50">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Address</option>
+                            <option value="1">Dhaka</option>
+                            <option value="2">Chattagram</option>
+                            <option value="3">Rangpur</option>
+                            <option value="3">Rajshahi</option>
+                            <option value="3">Sylhet</option>
+                            <option value="3">Cumilla</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- BIO -->
+                <div class=" form-floating w-100">
+                    <textarea class="form-control" placeholder="BIO" id="bio"></textarea>
+                    <label for="bio">BIO</label>
+                </div>
+
+                <!-- Profile Picture -->
+                <div class=" form-floating w-100">
+                    <input 
+                    type="file" 
+                    class="form-control" 
+                    id="profilepic" 
+                    aria-describedby="emailHelp">
+                    <label for="profilepic" class="form-label">Upload Your Profile Picture</label>
+                </div>
+
+                <!-- Marital Status -->
+                <div class="w-100">
+                 <p>Marital Status</p>
+                 <div class="w-100 d-flex gap-3">
+                    <div class="form-check">
+                        <input class="form-check-input" 
+                        type="radio" 
+                        value="single" 
+                        id="single">
+                        <label class="form-check-label" 
+                        for="single">
+                          Unmarried
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" 
+                        type="radio" 
+                        value="married" 
+                        id="married">
+                        <label class="form-check-label" for="married">
+                          Married
+                        </label>
+                      </div>
+                 </div>
+                </div>
+
+                <!-- Available for Job -->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" 
+                    type="checkbox" 
+                    role="switch" 
+                    id="jobready">
+                    <label class="form-check-label" 
+                    for="jobready">
+                    Eligible for Job
+                    </label>
+                </div>
+
+
+                <!-- Terms & Conditions -->
+                <div class="form-check w-100">
+                    <input class="form-check-input" type="checkbox" value="" id="agreeterms">
+                    <label class="form-check-label" for="agreeterms">
+                     I agree to all this terms & conditions.
+                    </label>
+                  </div>
+
+                <!-- Button trigger modal -->
+                 <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
+                Submit
+                </button>
+                </div>
+
+            </div>
+        </form> 
+  
+  <!-- Confirmation Modal -->
+  <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="confirmModal">Are You Sure?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Your Data Will be Kept in Private</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        
+    </main>
+    <script src="bootstrap.bundle.js"></script>
+    
+</body>
+</html>
